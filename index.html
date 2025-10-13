@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link id="style" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="side" id="side-nav">
+        <h3>SETTINGS</h3>
+        <ul>
+            <li>Change Background Color
+                <ul>
+                    <li>
+                        <input type="color" name="color" value="#2b2222" id="color">
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <button class="buttonR" id="roboChange" onclick="roboS()"><b>ROBO mode</b></button>
+            </li>
+            <li>
+                <h3>SCORES:</h3>
+            </li>
+            <li><p>PLAYER X :</p><p id="scoreX">0</p></li>
+            <li><p>PLAYER O :</p><p id="scoreO">0</p></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <table id="table">
+            <tr id="top">
+                <th>TIC</th>
+                <th>TAC</th>
+                <th>TOE</th>
+            </tr>
+            <tr class="bottom">
+                <td><div class="holder" onclick="move(0,0)"></div></td>
+                <td><div class="holder" onclick="move(0,1)"></div></td>
+                <td><div class="holder" onclick="move(0,2)"></div></td>
+            </tr>
+            <tr class="bottom">
+                <td><div class="holder" onclick="move(1,0)"></div></td>
+                <td><div class="holder" onclick="move(1,1)"></div></td>
+                <td><div class="holder" onclick="move(1,2)"></div></td>
+            </tr>
+            <tr class="bottom">
+                <td><div class="holder" onclick="move(2,0)"></div></td>
+                <td><div class="holder" onclick="move(2,1)"></div></td>
+                <td><div class="holder" onclick="move(2,2)"></div></td>
+            </tr>
+        </table>
+        
+        <div id="buttons">
+            <button class="button" onclick="resetBoard()"><b>RESET</b></button>
+            <button class="button" onclick="change()" id="toggle-sidebar"><b>OPEN</b></button>
+        </div>
+    </div>
+    
+    <script src="main.js">
+    </script>
+</body>
+</html>
